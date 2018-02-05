@@ -8,22 +8,21 @@ app---build.gradle
 //task to delete the old jar
 
 
-task deleteOldJar(type: Delete) {
-    delete 'build/libs/ramesh.jar'
+task deleteOldJar(type: Delete) {<br>
+    delete 'build/libs/ramesh.jar'<br>
 }
 
 
 //task to export contents as jar
 
 
-task exportJar(type: Copy) {
-    from('build/intermediates/bundles/release/')
-    into('release/')
-    include('classes.jar')
-    ///Give whatever name you want to give
-    rename('classes.jar', 'ramesh.jar')
-}
-
+task exportJar(type: Copy) {<br>
+    from('build/intermediates/bundles/release/')<br>
+    into('release/')<br>
+    include('classes.jar')<br>
+    ///Give whatever name you want to give<br>
+    rename('classes.jar', 'ramesh.jar')<br>
+}<br>
 exportJar.dependsOn(deleteOldJar, build)
 
 
