@@ -20,7 +20,7 @@ task exportJar(type: Copy) {<br>
     from('build/intermediates/bundles/release/')<br>
     into('release/')<br>
     include('classes.jar')<br>
-    ///Give whatever name you want to give<br>
+    //Give whatever name you want to give<br>
     rename('classes.jar', 'ramesh.jar')<br>
 }<br>
 exportJar.dependsOn(deleteOldJar, build)
