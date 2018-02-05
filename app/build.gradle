@@ -37,6 +37,7 @@ dependencies {
 //task to delete the old jar
 task deleteOldJar(type: Delete) {
     delete 'build/libs/ramesh.jar'
+    delete 'release/ramesh.jar'
 }
 
 //task to export contents as jar
